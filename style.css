@@ -1,0 +1,55 @@
+body {
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    
+}
+
+.container {
+    height: 800px;
+    /* margin-top: 100px; */
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1200px;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+.rock, .paper, .scissors{
+    width: 300px;
+    height: 150px;
+    background-color: dimgrey;
+    border:solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+p{
+   font-size: 50px;
+}
+.score {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    justify-content: space-around;
+    background-color: blueviolet;
+    border:solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score p {
+    color: pink;
+    font-weight: 900;
+    font-size: 30px;
+}
+.end_game {
+
+}

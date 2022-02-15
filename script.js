@@ -66,6 +66,101 @@ function game()
 
 }
 
-game();
+// game();
+
+let playerPlay = null;
+let rounds = 0;
+let playerScore = 0;
+let computerScore = 0;
+let score = 0;
+const score_p = document.querySelector('.score p');
+const end_game_p = document.querySelector('.end_game');
 
 
+function getScore(score){
+    
+    if(score == 0)
+    {
+        playerScore += 0;
+        computerScore += 0;
+    }else if (score == 1)
+    {
+        playerScore += 1;
+    }else if (score == -1)
+    {
+        computerScore +=1;
+    }
+    
+}
+function reapeatGame(rounds)
+{
+    if(rounds > 4)
+    {
+        score_p.textContent=`${playerScore} : ${computerScore}`;
+        end_game_p.textContent= "repeat?";
+        end_game_p.onclick = () => {
+            rounds = 0;
+            playerScore = 0;
+            computerScore = 0;
+        };
+    }
+}
+function setScore()
+{
+    score_p.textContent=`${playerScore} : ${computerScore}`;
+}
+function play(playerPlay)
+{
+    
+    if(playerPlay == null || rounds >= 5) {
+        return;
+    }else{
+   return playRound(Array[playerPlay],computerPlay());
+    }
+}
+
+const rock = document.querySelector('.rock');
+
+rock.onclick = () => {
+    playerPlay = 0;
+    score =  play(playerPlay);
+    getScore(score);
+    rounds++;
+    reapeatGame(rounds);
+    setScore();
+    
+}
+
+const paper = document.querySelector('.paper');
+
+paper.onclick = () => {
+    playerPlay = 1;
+    score = play(playerPlay);
+    getScore(score);
+    setScore();
+    rounds++;
+    reapeatGame(rounds);
+}
+
+const scissors = document.querySelector('.scissors');
+
+scissors.onclick = () => {
+    playerPlay = 2;
+    score = play(playerPlay);
+    getScore(score);
+    setScore();
+    rounds++;
+    reapeatGame(rounds);
+}
+
+
+
+
+
+
+// const scissors = document.querySelector('.scissors');
+
+// rock.addEventListener('click', (event) =>
+// {
+//     console.log('scissors')
+// });
