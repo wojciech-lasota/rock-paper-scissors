@@ -1,3 +1,4 @@
+//01:25
 const Array = ['rock', 'paper', 'scissors'];
 
 function computerPlayed(){
