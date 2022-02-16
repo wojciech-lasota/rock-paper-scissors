@@ -1,55 +1,99 @@
-body {
-    background-color: brown;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* align-items: center; */
-    
+*{
+  font-family: 'blood_lustregular';
+  line-height: 4px;
+  background-color: black;
+  
 }
 
-.container {
-    height: 800px;
-    /* margin-top: 100px; */
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 1200px;
-    align-items: center; 
-    flex-wrap: wrap;
-}
+header {
+    font-family: 'blood_lustregular';
+    background-color: black;
+    /* background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ad/Pierre_ciseaux_feuille_l%C3%A9zard_spock_aligned.svg");
+    background-repeat: no-repeat;
+    background-position: center; */
+    padding: 30px;
+    line-height: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: red;
+  }
 
-.rock, .paper, .scissors{
-    width: 300px;
-    height: 150px;
-    background-color: dimgrey;
-    border:solid 2px black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-p{
-   font-size: 50px;
-}
-.score {
-    width: 300px;
-    height: 150px;
+
+  section {
     display: flex;
     flex-direction: column;
-    align-self:center;
+    background-color: black;
+    
+  }
+  /*    flex-grow:0;
+        flex-shrink:1;
+        flex-basis:auto;
+        ----------------
+        flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+        flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+        flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                     take up screen as per the screen size available for
+                     e.g:- if 3 divs are in the wrapper then each div will take 33%. */
+  nav {
+    
+    flex: 1;
+    
+    /* background: #ccc; */
+    
+  }
+  nav ul {
+    
+    list-style-type: none;
+    padding: 0;
+  }
+  article {
+    
+    flex: 3;
+    /* background-color: #f1f1f1; */
+    padding: 10px;
+  }
+  footer {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  ul {
+    font-family: 'blood_lustregular';
+    font-size: 40px;
+    display: flex;
     justify-content: space-around;
-    background-color: blueviolet;
-    border:solid 2px black;
+    
+  }
+  ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    padding: 10px;
+    
+  }
+  ul li p{
+    font-size: 80px;
+    color:red;
+  }
+  article {
+    text-align: center;
+  }
+p.score {
+  font-size:80px;
+    color:red;
+  }
+.result_describe {
+  color:red;
 }
-.score p {
-    color: pink;
-    font-weight: 900;
-    font-size: 30px;
+.animatedScore{
+  color: red;
+  animation-name: example;
+  animation-duration: 2s;
 }
-.end_game {
-
+@keyframes example {
+  from {color: darkorange;}
+  to {color: red;}
 }
+  
